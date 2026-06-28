@@ -21,8 +21,8 @@ S3_BUCKET = "assignment-tracker-front"
 s3 = boto3.client("s3", region_name=AWS_REGION)
 dynamodb = boto3.resource("dynamodb", region_name=AWS_REGION)
 
-ASSIGNMENTS = dynamodb.Table("ci-cd-workshop-assignments")
-SUBMISSIONS = dynamodb.Table("ci-cd-workshop-submissions")
+ASSIGNMENTS = dynamodb.Table("ci-cd-assignments")
+SUBMISSIONS = dynamodb.Table("ci-cd-submissions")
 
 log.info("Backend initialized")
 
